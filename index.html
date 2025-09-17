@@ -4,22 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Velminds Technologies - Cutting-Edge IT Solutions</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <img src="logo/Logo.png" alt="Velminds Technologies" class="logo-img">
+                <img src="images/logo/Logo.png" alt="Velminds Technologies" class="logo-img">
+                <span class="logo-text">Velminds</span>
             </div>
             <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+            <div class="nav-cta">
+                <button class="cta-btn">Get Quote</button>
+            </div>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -29,20 +33,58 @@
     </nav>
 
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Empowering Engineering IT Services</h1>
-            <p class="hero-subtitle">Specializing in cutting-edge technologies that transform businesses through innovation</p>
-            <div class="hero-buttons">
-                <button class="btn-primary">Explore Services</button>
-                <button class="btn-secondary">Get Started</button>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-text">🚀 Next-Gen Technology Solutions</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-main">Empowering</span>
+                    <span class="title-highlight">Engineering IT</span>
+                    <span class="title-main">Services</span>
+                </h1>
+                <p class="hero-subtitle">Transform your business with cutting-edge AI, ML, and cloud technologies. We deliver innovative solutions that drive growth and efficiency.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary">
+                        <span>Explore Services</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn-secondary">
+                        <i class="fas fa-play"></i>
+                        <span>Watch Demo</span>
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">99%</span>
+                        <span class="stat-label">Success Rate</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Support</span>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="hero-visual">
-            <div class="tech-grid">
-                <div class="tech-item" data-tech="AI">AI</div>
-                <div class="tech-item" data-tech="ML">ML</div>
-                <div class="tech-item" data-tech="Data Science">Data</div>
-                <div class="tech-item" data-tech="Cloud">Cloud</div>
+            <div class="hero-visual">
+                <div class="floating-elements">
+                    <div class="tech-orb orb-1">AI</div>
+                    <div class="tech-orb orb-2">ML</div>
+                    <div class="tech-orb orb-3">IoT</div>
+                    <div class="tech-orb orb-4">Cloud</div>
+                    <div class="tech-orb orb-5">Data</div>
+                    <div class="tech-orb orb-6">API</div>
+                </div>
+                <div class="hero-image">
+                    <div class="tech-visualization">
+                        <div class="pulse-ring"></div>
+                        <div class="pulse-ring delay-1"></div>
+                        <div class="pulse-ring delay-2"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -112,61 +154,149 @@
     <section class="tech-showcase">
         <div class="container">
             <h2 class="section-title">Latest Technologies We Master</h2>
-            <div class="tech-details">
-                <div class="tech-category">
-                    <div class="tech-header">
+            <div class="tech-grid">
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tech-icon">
+                        <i class="fas fa-robot"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Generative AI & LLMs</h3>
+                    <p>Custom GPT models, AI agents, and intelligent automation using latest transformer architectures and fine-tuning techniques.</p>
+                    <div class="tech-tags">
+                        <span class="tag">ChatGPT Integration</span>
+                        <span class="tag">Custom LLMs</span>
+                        <span class="tag">AI Agents</span>
+                        <span class="tag">RAG Systems</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="95"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tech-icon">
+                        <i class="fas fa-eye"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Computer Vision & AR/VR</h3>
+                    <p>Advanced image recognition, real-time object detection, and immersive AR/VR experiences for next-gen applications.</p>
+                    <div class="tech-tags">
+                        <span class="tag">Object Detection</span>
+                        <span class="tag">AR/VR Development</span>
+                        <span class="tag">3D Modeling</span>
+                        <span class="tag">Spatial Computing</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="92"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="tech-icon">
+                        <i class="fas fa-link"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Blockchain & Web3</h3>
+                    <p>Decentralized applications, smart contracts, NFT platforms, and cryptocurrency solutions on multiple blockchain networks.</p>
+                    <div class="tech-tags">
+                        <span class="tag">Smart Contracts</span>
+                        <span class="tag">DeFi Solutions</span>
+                        <span class="tag">NFT Platforms</span>
+                        <span class="tag">Web3 Integration</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="88"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="tech-icon">
+                        <i class="fas fa-network-wired"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Edge Computing & IoT</h3>
+                    <p>Ultra-low latency processing, 5G integration, and intelligent IoT ecosystems for real-time decision making.</p>
+                    <div class="tech-tags">
+                        <span class="tag">5G Integration</span>
+                        <span class="tag">Edge AI</span>
+                        <span class="tag">IoT Platforms</span>
+                        <span class="tag">Real-time Analytics</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="90"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="tech-icon">
+                        <i class="fas fa-shield-alt"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Quantum Computing & Security</h3>
+                    <p>Quantum-resistant cryptography, quantum algorithms, and next-generation security protocols for future-proof systems.</p>
+                    <div class="tech-tags">
+                        <span class="tag">Quantum Algorithms</span>
+                        <span class="tag">Post-Quantum Crypto</span>
+                        <span class="tag">Zero Trust Security</span>
+                        <span class="tag">Quantum ML</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="85"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="tech-icon">
+                        <i class="fas fa-cloud"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Cloud-Native & DevOps</h3>
+                    <p>Kubernetes orchestration, serverless computing, CI/CD pipelines, and infrastructure as code for scalable solutions.</p>
+                    <div class="tech-tags">
+                        <span class="tag">Kubernetes</span>
+                        <span class="tag">Serverless</span>
+                        <span class="tag">GitOps</span>
+                        <span class="tag">Multi-Cloud</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="94"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="700">
+                    <div class="tech-icon">
                         <i class="fas fa-chart-line"></i>
-                        <h3>Data Science & Analytics</h3>
+                        <div class="icon-glow"></div>
                     </div>
-                    <p>Transform raw data into actionable insights with advanced statistical modeling, predictive analytics, and business intelligence solutions.</p>
-                    <ul class="tech-list">
-                        <li>Big Data Processing</li>
-                        <li>Statistical Modeling</li>
-                        <li>Data Visualization</li>
-                        <li>Business Intelligence</li>
-                    </ul>
+                    <h3>Advanced Data Analytics</h3>
+                    <p>Real-time streaming analytics, predictive modeling, and AI-powered business intelligence for data-driven decisions.</p>
+                    <div class="tech-tags">
+                        <span class="tag">Stream Processing</span>
+                        <span class="tag">MLOps</span>
+                        <span class="tag">Data Lakes</span>
+                        <span class="tag">AutoML</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="93"></div>
+                    </div>
                 </div>
-                
-                <div class="tech-category">
-                    <div class="tech-header">
-                        <i class="fas fa-brain"></i>
-                        <h3>Artificial Intelligence & ML</h3>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="800">
+                    <div class="tech-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                        <div class="icon-glow"></div>
                     </div>
-                    <p>Leverage AI and machine learning to automate processes, enhance decision-making, and create intelligent systems that learn and adapt.</p>
-                    <ul class="tech-list">
-                        <li>Deep Learning Models</li>
-                        <li>Natural Language Processing</li>
-                        <li>Computer Vision</li>
-                        <li>Predictive Analytics</li>
-                    </ul>
-                </div>
-                
-                <div class="tech-category">
-                    <div class="tech-header">
-                        <i class="fas fa-cloud-upload-alt"></i>
-                        <h3>Cloud Services</h3>
+                    <h3>Next-Gen Mobile & PWAs</h3>
+                    <p>Cross-platform mobile apps, progressive web applications, and native performance with modern frameworks.</p>
+                    <div class="tech-tags">
+                        <span class="tag">React Native</span>
+                        <span class="tag">Flutter</span>
+                        <span class="tag">PWA</span>
+                        <span class="tag">WebAssembly</span>
                     </div>
-                    <p>Scalable, secure, and cost-effective cloud solutions including migration, architecture design, and multi-cloud management.</p>
-                    <ul class="tech-list">
-                        <li>AWS, Azure, GCP</li>
-                        <li>Serverless Architecture</li>
-                        <li>Container Orchestration</li>
-                        <li>Cloud Migration</li>
-                    </ul>
-                </div>
-                
-                <div class="tech-category">
-                    <div class="tech-header">
-                        <i class="fas fa-code"></i>
-                        <h3>Web Services & APIs</h3>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="91"></div>
                     </div>
-                    <p>Modern web applications, RESTful APIs, and microservices architecture for seamless integration and scalability.</p>
-                    <ul class="tech-list">
-                        <li>RESTful API Development</li>
-                        <li>Microservices Architecture</li>
-                        <li>Progressive Web Apps</li>
-                        <li>Real-time Applications</li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -289,7 +419,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="logo/Logo.png" alt="Velminds Technologies" class="logo-img">
+                    <img src="images/logo/Logo.png" alt="Velminds Technologies" class="logo-img">
                 </div>
                 <p>&copy; 2024 Velminds Technologies. All rights reserved.</p>
             </div>
@@ -318,6 +448,6 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
