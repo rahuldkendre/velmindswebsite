@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay">
+        <div class="loader"></div>
+    </div>
+    
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
@@ -370,18 +375,18 @@
     <section id="about" class="about">
         <div class="container">
             <div class="about-content">
-                <h2>About Velminds Technologies</h2>
-                <p>We are a technology acceleration company that rapidly transforms businesses through next-generation innovations. We don't just implement technology – we accelerate its adoption, optimize its performance, and maximize its impact on your digital transformation journey.</p>
+                <h2 class="fade-in">About Velminds Technologies</h2>
+                <p class="fade-in stagger-1">We are a technology acceleration company that rapidly transforms businesses through next-generation innovations. We don't just implement technology – we accelerate its adoption, optimize its performance, and maximize its impact on your digital transformation journey.</p>
                 
                 <div class="vision-mission">
-                    <div class="vision">
+                    <div class="vision slide-in-left stagger-2">
                         <div class="vm-icon">
                             <i class="fas fa-eye"></i>
                         </div>
                         <h3>Our Vision</h3>
                         <p>To be the global leader in transformative technology solutions, accelerating innovation and shaping the future of digital excellence.</p>
                     </div>
-                    <div class="mission">
+                    <div class="mission slide-in-right stagger-3">
                         <div class="vm-icon">
                             <i class="fas fa-rocket"></i>
                         </div>
@@ -391,16 +396,16 @@
                 </div>
                 
                 <div class="stats">
-                    <div class="stat">
-                        <h3>50+</h3>
+                    <div class="stat scale-in stagger-4">
+                        <h3 class="stat-number">50+</h3>
                         <p>Projects Delivered</p>
                     </div>
-                    <div class="stat">
-                        <h3>8</h3>
+                    <div class="stat scale-in stagger-5">
+                        <h3 class="stat-number">8</h3>
                         <p>Core Technologies</p>
                     </div>
-                    <div class="stat">
-                        <h3>24/7</h3>
+                    <div class="stat scale-in stagger-6">
+                        <h3 class="stat-number">24/7</h3>
                         <p>Support Available</p>
                     </div>
                 </div>
@@ -458,9 +463,9 @@
 
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Get In Touch</h2>
-            <p>Ready to transform your business with cutting-edge technology?</p>
-            <div class="contact-form">
+            <h2 class="fade-in">Get In Touch</h2>
+            <p class="fade-in stagger-1">Ready to transform your business with cutting-edge technology?</p>
+            <div class="contact-form fade-in stagger-2">
                 <form>
                     <input type="text" placeholder="Your Name" required>
                     <input type="email" placeholder="Your Email" required>
