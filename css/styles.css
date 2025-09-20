@@ -714,6 +714,31 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.3);
     position: relative;
     overflow: hidden;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.tech-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: var(--shadow-heavy);
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(102, 126, 234, 0.3);
+}
+
+.tech-card:hover .tech-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+}
+
+.tech-card:hover .icon-glow {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.tech-card:hover .tag {
+    background: rgba(102, 126, 234, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(102, 126, 234, 0.2);
 }
 
 .tech-card::before {
