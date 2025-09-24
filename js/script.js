@@ -3,11 +3,11 @@ window.addEventListener('load', () => {
     const loadingOverlay = document.querySelector('.loading-overlay');
     if (loadingOverlay) {
         setTimeout(() => {
-            loadingOverlay.classList.add('hidden');
+            loadingOverlay.style.opacity = '0';
             setTimeout(() => {
-                loadingOverlay.remove();
+                loadingOverlay.style.display = 'none';
             }, 500);
-        }, 1500);
+        }, 800);
     }
 });
 
@@ -41,26 +41,29 @@ function initScrollAnimations() {
     });
 }
 
-// Particle System
+// Particle System (simplified)
 function createParticles() {
     const particleContainer = document.createElement('div');
     particleContainer.className = 'particles';
     document.body.appendChild(particleContainer);
     
     function createParticle() {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
-        particle.style.animationDelay = Math.random() * 5 + 's';
-        particleContainer.appendChild(particle);
-        
-        setTimeout(() => {
-            particle.remove();
-        }, 20000);
+        if (document.querySelectorAll('.particle').length < 5) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDuration = '15s';
+            particleContainer.appendChild(particle);
+            
+            setTimeout(() => {
+                if (particle.parentNode) {
+                    particle.remove();
+                }
+            }, 15000);
+        }
     }
     
-    setInterval(createParticle, 2000);
+    setInterval(createParticle, 3000);
 }
 
 // Typing Animation
@@ -132,44 +135,42 @@ function initParallax() {
     });
 }
 
-// Mouse Trail Effect
+// Mouse Trail Effect (simplified)
 function initMouseTrail() {
-    const trail = [];
-    const trailLength = 10;
+    let isThrottled = false;
     
     document.addEventListener('mousemove', (e) => {
-        trail.push({ x: e.clientX, y: e.clientY });
-        
-        if (trail.length > trailLength) {
-            trail.shift();
-        }
-        
-        // Remove existing trail elements
-        document.querySelectorAll('.mouse-trail').forEach(el => el.remove());
-        
-        // Create new trail elements
-        trail.forEach((point, index) => {
+        if (!isThrottled) {
             const trailElement = document.createElement('div');
-            trailElement.className = 'mouse-trail';
             trailElement.style.cssText = `
                 position: fixed;
-                width: ${10 - index}px;
-                height: ${10 - index}px;
-                background: rgba(102, 126, 234, ${0.8 - index * 0.08});
+                width: 6px;
+                height: 6px;
+                background: rgba(102, 126, 234, 0.6);
                 border-radius: 50%;
                 pointer-events: none;
                 z-index: 9999;
-                left: ${point.x}px;
-                top: ${point.y}px;
+                left: ${e.clientX}px;
+                top: ${e.clientY}px;
                 transform: translate(-50%, -50%);
-                transition: all 0.1s ease;
+                transition: opacity 0.3s ease;
             `;
             document.body.appendChild(trailElement);
             
             setTimeout(() => {
-                trailElement.remove();
-            }, 100);
-        });
+                trailElement.style.opacity = '0';
+                setTimeout(() => {
+                    if (trailElement.parentNode) {
+                        trailElement.remove();
+                    }
+                }, 300);
+            }, 50);
+            
+            isThrottled = true;
+            setTimeout(() => {
+                isThrottled = false;
+            }, 50);
+        }
     });
 }
 
@@ -606,17 +607,16 @@ document.head.appendChild(successStyle);
 
 // Initialize all animations when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    // Add loading overlay to body
-    const loadingOverlay = document.createElement('div');
-    loadingOverlay.className = 'loading-overlay';
-    loadingOverlay.innerHTML = '<div class="loader"></div>';
-    document.body.prepend(loadingOverlay);
+    const techCards = document.querySelectorAll('.tech-card');
+    techCards.forEach(card => {
+        progressObserver.observe(card);
+    });
     
     initScrollAnimations();
     initTechOrbs();
-    initParallax();
-    initMouseTrail();
-    createParticles();
+    // initParallax();
+    // initMouseTrail();
+    // createParticles();
     
     // Add stagger classes to elements
     const serviceCards = document.querySelectorAll('.service-card');
@@ -634,14 +634,14 @@ document.addEventListener('DOMContentLoaded', () => {
         card.classList.add('slide-in-left', `stagger-${(index % 3) + 1}`);
     });
     
-    // Add typing animation to hero title
+    // Add typing animation to hero title (simplified)
     const heroTitle = document.querySelector('.title-main');
     if (heroTitle) {
-        const originalText = heroTitle.textContent;
-        heroTitle.classList.add('typing-animation');
+        heroTitle.style.opacity = '0';
         setTimeout(() => {
-            typeWriter(heroTitle, originalText, 100);
-        }, 2000);
+            heroTitle.style.transition = 'opacity 1s ease';
+            heroTitle.style.opacity = '1';
+        }, 1000);
     }
     
     // Animate counters when they come into view
