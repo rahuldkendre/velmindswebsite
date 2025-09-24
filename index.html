@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Velminds Technologies - Cutting-Edge IT Solutions</title>
+    <link rel="icon" type="image/png" href="images/logo/Logo.png">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -369,18 +370,18 @@
     <section id="about" class="about">
         <div class="container">
             <div class="about-content">
-                <h2>About Velminds Technologies</h2>
-                <p>We are a technology acceleration company that rapidly transforms businesses through next-generation innovations. We don't just implement technology – we accelerate its adoption, optimize its performance, and maximize its impact on your digital transformation journey.</p>
+                <h2 class="fade-in">About Velminds Technologies</h2>
+                <p class="fade-in stagger-1">We are a technology acceleration company that rapidly transforms businesses through next-generation innovations. We don't just implement technology – we accelerate its adoption, optimize its performance, and maximize its impact on your digital transformation journey.</p>
                 
                 <div class="vision-mission">
-                    <div class="vision">
+                    <div class="vision slide-in-left stagger-2">
                         <div class="vm-icon">
                             <i class="fas fa-eye"></i>
                         </div>
                         <h3>Our Vision</h3>
                         <p>To be the global leader in transformative technology solutions, accelerating innovation and shaping the future of digital excellence.</p>
                     </div>
-                    <div class="mission">
+                    <div class="mission slide-in-right stagger-3">
                         <div class="vm-icon">
                             <i class="fas fa-rocket"></i>
                         </div>
@@ -390,16 +391,16 @@
                 </div>
                 
                 <div class="stats">
-                    <div class="stat">
-                        <h3>50+</h3>
+                    <div class="stat scale-in stagger-4">
+                        <h3 class="stat-number">50+</h3>
                         <p>Projects Delivered</p>
                     </div>
-                    <div class="stat">
-                        <h3>8</h3>
+                    <div class="stat scale-in stagger-5">
+                        <h3 class="stat-number">8</h3>
                         <p>Core Technologies</p>
                     </div>
-                    <div class="stat">
-                        <h3>24/7</h3>
+                    <div class="stat scale-in stagger-6">
+                        <h3 class="stat-number">24/7</h3>
                         <p>Support Available</p>
                     </div>
                 </div>
@@ -415,27 +416,53 @@
             <div class="careers-grid">
                 <div class="career-card">
                     <div class="career-icon">
-                        <i class="fas fa-code"></i>
+                        <i class="fas fa-robot"></i>
                     </div>
-                    <h3>Full Stack Developer</h3>
+                    <h3>GenAI Engineer</h3>
                     <div class="career-details">
                         <span class="location"><i class="fas fa-map-marker-alt"></i> Remote/Hybrid</span>
                         <span class="type"><i class="fas fa-clock"></i> Full-time</span>
                     </div>
-                    <p>Build scalable web applications using modern frameworks and cloud technologies.</p>
+                    <p>Build cutting-edge generative AI solutions using LLMs and advanced AI frameworks.</p>
                     <button class="apply-btn">Apply Now</button>
                 </div>
                 
                 <div class="career-card">
                     <div class="career-icon">
-                        <i class="fas fa-brain"></i>
+                        <i class="fas fa-code"></i>
                     </div>
-                    <h3>AI/ML Engineer</h3>
+                    <h3>Front End Developer</h3>
                     <div class="career-details">
                         <span class="location"><i class="fas fa-map-marker-alt"></i> Remote/Hybrid</span>
                         <span class="type"><i class="fas fa-clock"></i> Full-time</span>
                     </div>
-                    <p>Develop intelligent systems and machine learning models for next-gen applications.</p>
+                    <p>Create responsive and interactive user interfaces using React, Vue, and modern CSS.</p>
+                    <button class="apply-btn">Apply Now</button>
+                </div>
+                
+                <div class="career-card">
+                    <div class="career-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Data Scientist</h3>
+                    <div class="career-details">
+                        <span class="location"><i class="fas fa-map-marker-alt"></i> Remote/Hybrid</span>
+                        <span class="type"><i class="fas fa-clock"></i> Full-time</span>
+                    </div>
+                    <p>Extract insights from complex datasets using Python, R, and machine learning techniques.</p>
+                    <button class="apply-btn">Apply Now</button>
+                </div>
+                
+                <div class="career-card">
+                    <div class="career-icon">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <h3>Java Developer</h3>
+                    <div class="career-details">
+                        <span class="location"><i class="fas fa-map-marker-alt"></i> Remote/Hybrid</span>
+                        <span class="type"><i class="fas fa-clock"></i> Full-time</span>
+                    </div>
+                    <p>Develop enterprise-grade applications using Java, Spring Boot, and microservices architecture.</p>
                     <button class="apply-btn">Apply Now</button>
                 </div>
                 
@@ -457,9 +484,9 @@
 
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Get In Touch</h2>
-            <p>Ready to transform your business with cutting-edge technology?</p>
-            <div class="contact-form">
+            <h2 class="fade-in">Get In Touch</h2>
+            <p class="fade-in stagger-1">Ready to transform your business with cutting-edge technology?</p>
+            <div class="contact-form fade-in stagger-2">
                 <form>
                     <input type="text" placeholder="Your Name" required>
                     <input type="email" placeholder="Your Email" required>
